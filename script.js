@@ -2,6 +2,38 @@ document.addEventListener("DOMContentLoaded", () => {
     const gridContainer = document.getElementById("our-work-grid");
     const WORK_JSON_PATH = "https://raw.githubusercontent.com/De-whiz/tachael-landing/master/assets/our-work.json";
     let workData = {};
+
+    // Rotating taglines
+    function initTaglineRotation() {
+      const tagline = document.querySelector('.hero-tagline');
+      if (!tagline) return;
+      
+      const taglines = [
+        'Where Ideas Take Shape',
+        'Where Vision Meets Creation',
+        'Where Dreams Turn Into Designs',
+        'Where Imagination Becomes Art',
+        'Where Creativity Finds Purpose',
+        'Where Inspiration Comes Alive',
+        'Where Concepts Turn Into Masterpieces'
+      ];
+      
+      let currentTagline = 0;
+      
+      function rotateTagline() {
+        tagline.style.opacity = '0';
+        setTimeout(() => {
+          tagline.textContent = taglines[currentTagline];
+          tagline.style.opacity = '1';
+          currentTagline = (currentTagline + 1) % taglines.length;
+        }, 400);
+      }
+      
+      // Initial delay then start rotation
+      setTimeout(() => {
+        setInterval(rotateTagline, 4000);
+      }, 2000);
+    }
   
     // Typewriter effect for hero section
     function initTypewriter() {
@@ -139,8 +171,9 @@ document.addEventListener("DOMContentLoaded", () => {
       console.error("Failed to load ourwork.json", err);
     });
     
-    // Initialize typewriter effect
+    // Initialize typewriter effect and tagline rotation
     initTypewriter();
+    initTaglineRotation();
 });
 
 // Header / nav toggle behavior
