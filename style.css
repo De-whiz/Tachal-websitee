@@ -141,7 +141,24 @@
   
   .hero p {
     font-size: 1.2rem;
+    margin-bottom: 1rem;
+  }
+  
+  .hero-subtext {
     margin-bottom: 2rem;
+    max-width: 600px;
+  }
+
+  .hero-subtext .accent-text {
+    color: var(--accent);
+    font-size: 1.4rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+  }
+
+  .hero-subtext .supporting-text {
+    font-size: 1rem;
+    opacity: 0.9;
   }
   
   .btn-primary {
@@ -264,10 +281,50 @@
   }
 
     
-  /* Grid Container */
-  #our-work {
-    padding: 50px 0;
-    background-color: #f4f4f4;
+  /* Our Work Section */
+  .our-work {
+    padding: 5rem 2rem;
+    background-color: var(--bg);
+  }
+
+  .portfolio-cta {
+    background: linear-gradient(135deg, var(--text) 0%, var(--primary-dark) 100%);
+    color: white;
+    padding: 3rem 2rem;
+    border-radius: 20px;
+    text-align: center;
+    margin: 2rem 0 4rem;
+  }
+
+  .portfolio-cta h3 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+  }
+
+  .portfolio-cta p {
+    opacity: 0.9;
+    margin-bottom: 1.5rem;
+  }
+
+  .portfolio-cta .btn-secondary {
+    background: white;
+    color: var(--text);
+    border: none;
+    padding: 0.8rem 2rem;
+    font-size: 1.1rem;
+  }
+
+  .portfolio-cta .btn-secondary:hover {
+    background: var(--accent);
+    color: white;
+    transform: translateY(-3px);
+  }
+
+  .work-categories {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
   }
   
   .container {
@@ -515,4 +572,148 @@
   @media (min-width: 901px) {
     .services-grid { grid-template-columns: repeat(3, 1fr); }
     .container { max-width: 1200px; }
+  }
+
+  /* Why Choose Us Section */
+  .why-us {
+    padding: 5rem 2rem;
+    background-color: var(--bg);
+  }
+
+  .section-subtitle {
+    font-size: 1.2rem;
+    color: var(--text);
+    opacity: 0.85;
+    margin-bottom: 3rem;
+    text-align: center;
+  }
+
+  .features-grid {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  }
+
+  .feature-card {
+    background: var(--muted-bg);
+    padding: 2rem;
+    border-radius: 16px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .feature-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 30px var(--card-shadow);
+  }
+
+  .feature-icon {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .feature-card h3 {
+    color: var(--text);
+    margin-bottom: 1rem;
+    font-size: 1.25rem;
+  }
+
+  /* Process Section */
+  .process {
+    padding: 5rem 2rem;
+    background: linear-gradient(135deg, var(--text) 0%, var(--primary-dark) 100%);
+    color: white;
+  }
+
+  .process h2,
+  .process .section-subtitle {
+    color: white;
+  }
+
+  .process-steps {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    margin-top: 3rem;
+  }
+
+  .process-step {
+    text-align: center;
+    padding: 2rem;
+    background: rgba(255,255,255,0.1);
+    border-radius: 16px;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+  }
+
+  .step-number {
+    width: 40px;
+    height: 40px;
+    background: var(--accent);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1rem;
+    font-weight: bold;
+  }
+
+  /* Tech Stack Section */
+  .tech-stack {
+    padding: 5rem 2rem;
+    background-color: var(--muted-bg);
+  }
+
+  .tech-grid {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    margin-top: 3rem;
+  }
+
+  .tech-category {
+    background: white;
+    padding: 2rem;
+    border-radius: 16px;
+    box-shadow: 0 8px 20px var(--card-shadow);
+  }
+
+  .tech-category h3 {
+    color: var(--accent);
+    margin-bottom: 1.5rem;
+    font-size: 1.25rem;
+  }
+
+  .tech-category ul {
+    list-style: none;
+    padding: 0;
+  }
+
+  .tech-category li {
+    padding: 0.75rem 0;
+    border-bottom: 1px solid rgba(0,0,0,0.05);
+    color: var(--text);
+  }
+
+  .tech-category li:last-child {
+    border-bottom: none;
+  }
+
+  @media (max-width: 600px) {
+    .why-us,
+    .process,
+    .tech-stack {
+      padding: 3rem 1rem;
+    }
+
+    .section-subtitle {
+      font-size: 1rem;
+      margin-bottom: 2rem;
+    }
+
+    .feature-card,
+    .process-step,
+    .tech-category {
+      padding: 1.5rem;
+    }
   }
