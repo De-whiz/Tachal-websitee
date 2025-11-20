@@ -503,6 +503,11 @@
     .hero h1 { font-size: 1.8rem; }
     .hero p { font-size: 1rem; }
     .hero { min-height: 55vh; padding: 1.5rem; }
+    .hero .hero-tagline {
+      font-size: 0.95rem;
+      margin: 0.75rem 0 1.5rem;
+      letter-spacing: 1px;
+    }
     .services { padding: 2.5rem 1rem; }
     .service-card { padding: 1rem; border-radius: 14px; }
     .site-header .header-inner { padding: 0.5rem 0.75rem; }
